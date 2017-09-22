@@ -68,6 +68,9 @@ fieldset.topField {
     Input fields
   ---------------- */
 
+div {
+  margin-bottom: 20px;
+}
 
 input[type="text"],
 input[type="password"],
@@ -89,7 +92,6 @@ select {
   color: #8a97a0;
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
   margin-top: 10px;
-  margin-bottom: 20px;
 }
 
 input[placeholder*="Required"] {
@@ -183,24 +185,45 @@ footer {
 	    max-width: 768px;
 	  }
 
-    /*.flex-wrapper {
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;   
-        align-items: stretch;
+    select {
+      margin-left: -18px;
     }
 
     .flex-wrapper > div {
-        flex: 1 1 auto;
-    }
 
+        align-items: center;
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: row;
+        justify-content: space-between;   
+    }
 
     label {
-        display: none;
+      flex: 1;
     }
 
-    input {
-        width: 100%;
-    }*/
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"],
+    input[type="tel"],
+    textarea,
+    select {
+      margin-top: 0;
+    }
+
+    input, select {
+      flex: 2;
+      flex-shrink: 3;
+      flex-grow: 3; 
+    }
+
+    input[name*="user_zip"] {
+      flex-shrink: 0;
+      flex-grow: 0;
+      align-items: flex-start;
+      width: 175px;
+    }
+
+
 }
