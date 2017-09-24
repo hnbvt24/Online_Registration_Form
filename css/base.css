@@ -17,7 +17,9 @@ body {
 }
 
 form {
+  background-color: #fafbfb;
   margin: 0 auto;
+  margin-top: 20px;
   padding: 10px 20px;
   width: 100%;
 }
@@ -34,8 +36,7 @@ a:hover {
 fieldset {
   border: none;
   margin: 0;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
 }
 
 header, hr {
@@ -67,7 +68,8 @@ fieldset.bottomField {
     Input fields
   ---------------- */
 
-div {
+.flex-wrapper > div,
+div > textarea {
   margin-bottom: 20px;
 }
 
@@ -88,9 +90,18 @@ select {
   padding: 18px;
   width: 100%;
   background-color: #e8eeef;
-  color: #8a97a0;
+  color: #747777;
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
   margin-top: 10px;
+  -webkit-transition: all .4s ease-out;
+  -moz-transition: all .4s ease-out;
+  -ms-transition: all .4s ease-out;
+  -o-transition: all .4s ease-out;
+  transition: all .4s ease-out;
+}
+
+input::placeholder {
+  color: #bbbcbc;
 }
 
 input[placeholder*="Required"] {
@@ -101,6 +112,12 @@ input[placeholder*="Required"] {
 
 input:focus {
   border: 2px solid #2d3945;
+  background-color: #f8f9f9;
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -ms-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  transition: all .2s ease-in;
 }
 
 input[placeholder*="Required"]:focus {
@@ -150,7 +167,7 @@ hr {
 button {
   padding: 19px 39px 18px 39px;
   color: #FFF;
-  background-color: #4ebbb5;
+  background: #4ebbb5;
   font-size: 18px;
   text-align: center;
   font-style: normal;
